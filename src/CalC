@@ -1,0 +1,49 @@
+  import java.util.Scanner;
+
+public class Cal1 {
+    
+    public static int cAddition(int a, int b) {
+        return a+b;
+    }
+
+    public static int cSubstration(int a, int b) {
+        return a-b;
+    }
+
+    public static int cSum(int a, int b) {
+        return a*b;
+    }
+
+    public static int cDiv(int a, int b) {
+        return a/b;
+    }
+
+    public static void main(String args[]) {
+        System.out.println("Calculator");
+        int a, b;
+        char op;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter KEY 1");
+        a = sc.nextInt();
+        System.out.println("Enter KEY 2");
+        b = sc.nextInt();
+        System.out.println("Select the operator : + - * / ");
+        op = sc.next().charAt(0);
+        switch(op){
+            case '+' :
+            System.out.println(cAddition(a, b));
+            break;
+            case '-' :
+            System.out.println(cSubstration(a, b));
+            break;
+            case '*' :
+            System.out.println(cSum(a, b));
+            break;
+            case '/' :
+            System.out.println(cDiv(a, b));
+            default : 
+            System.out.println("please select the desierd option");
+        }
+
+    }
+}
